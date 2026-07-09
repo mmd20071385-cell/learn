@@ -1,0 +1,267 @@
+:root{
+  --bg:#08090d;
+  --bg-2:#10131b;
+  --card:#121724cc;
+  --border:rgba(255,255,255,.08);
+  --text:#e7eaf3;
+  --muted:#a9b0c3;
+  --accent:#00e5ff;
+  --accent-2:#7c3aed;
+  --accent-3:#22c55e;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family:'Vazirmatn', sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(124,58,237,.16), transparent 25%),
+    radial-gradient(circle at top left, rgba(0,229,255,.10), transparent 22%),
+    linear-gradient(180deg, #06070a 0%, #0b0f17 100%);
+  color:var(--text);
+}
+
+a{ text-decoration:none; }
+
+.glass-nav{
+  background:rgba(10,13,20,.72);
+  backdrop-filter: blur(18px);
+  border-bottom:1px solid var(--border);
+}
+
+.brand-dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 18px var(--accent);
+  margin-left:8px;
+}
+
+.btn-accent{
+  background: linear-gradient(135deg, var(--accent), #39a0ff);
+  border:0;
+  color:#041018;
+  font-weight:700;
+  box-shadow:0 10px 30px rgba(0,229,255,.18);
+}
+.btn-accent:hover{ opacity:.92; transform: translateY(-1px); }
+
+.hero-section{
+  position:relative;
+  padding:100px 0 70px;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,229,255,.11), transparent 18%),
+    radial-gradient(circle at 80% 30%, rgba(124,58,237,.15), transparent 18%);
+  pointer-events:none;
+}
+.fw-black{ font-weight:800; }
+.text-gradient{
+  background: linear-gradient(135deg, #fff, var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.badge-soft{
+  background: rgba(0,229,255,.12);
+  color: var(--accent);
+  border:1px solid rgba(0,229,255,.22);
+  padding:.6rem .9rem;
+  border-radius:999px;
+}
+.hero-stats{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:14px;
+}
+.stat-card, .info-card, .course-card, .content-box, .cta-box, .fish-card{
+  background: linear-gradient(180deg, rgba(18,23,36,.92), rgba(10,13,20,.92));
+  border:1px solid var(--border);
+  border-radius:22px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.28);
+}
+.stat-card{
+  padding:18px;
+}
+.stat-card strong{
+  display:block;
+  font-size:1.6rem;
+}
+.stat-card span{ color:var(--muted); font-size:.95rem; }
+
+.section-pad{ padding:80px 0; }
+.section-alt{ background: rgba(255,255,255,.02); }
+.section-head .section-kicker{
+  color:var(--accent);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:.8rem;
+}
+.section-title{ font-weight:800; margin:.35rem 0 .4rem; }
+.info-card, .course-card, .content-box, .cta-box{
+  padding:22px;
+}
+.info-card{
+  transition:.25s ease;
+}
+.info-card:hover, .course-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(0,229,255,.25);
+}
+.icon-badge{
+  width:48px;height:48px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  background: rgba(0,229,255,.12);
+  color:var(--accent);
+  font-weight:800;
+  margin-bottom:16px;
+}
+
+.course-thumb{
+  height:160px;
+  border-radius:18px;
+  margin-bottom:16px;
+}
+.gradient-1{ background: linear-gradient(135deg,#0ea5e9,#8b5cf6); }
+.gradient-2{ background: linear-gradient(135deg,#22c55e,#06b6d4); }
+.gradient-3{ background: linear-gradient(135deg,#f59e0b,#ec4899); }
+.gradient-4{ background: linear-gradient(135deg,#7c3aed,#06b6d4); }
+.gradient-5{ background: linear-gradient(135deg,#0f172a,#334155); }
+.gradient-6{ background: linear-gradient(135deg,#14b8a6,#3b82f6); }
+.gradient-7{ background: linear-gradient(135deg,#ef4444,#f97316); }
+.gradient-8{ background: linear-gradient(135deg,#8b5cf6,#ec4899); }
+.gradient-9{ background: linear-gradient(135deg,#22c55e,#84cc16); }
+.gradient-10{ background: linear-gradient(135deg,#06b6d4,#3b82f6); }
+.gradient-11{ background: linear-gradient(135deg,#a855f7,#0ea5e9); }
+.gradient-12{ background: linear-gradient(135deg,#f43f5e,#8b5cf6); }
+
+.course-meta{
+  display:flex;
+  justify-content:space-between;
+  color:var(--muted);
+  font-size:.9rem;
+  margin-bottom:10px;
+}
+
+.timeline{ position:relative; padding-right:24px; }
+.timeline::before{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  right:8px;
+  width:2px;
+  background: linear-gradient(180deg, var(--accent), transparent);
+}
+.timeline-item{
+  position:relative;
+  padding:0 28px 28px 0;
+}
+.timeline-dot{
+  position:absolute;
+  right:0;
+  top:4px;
+  width:18px;height:18px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 16px rgba(0,229,255,.45);
+}
+.timeline-content{
+  background: rgba(255,255,255,.02);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:18px;
+}
+.page-hero{
+  padding:70px 0 35px;
+}
+.page-hero h1{
+  font-weight:800;
+  margin-bottom:10px;
+}
+.page-hero p,
+.text-muted,
+.course-card p,
+.info-card p,
+.content-box p,
+.footer p{
+  color:var(--muted) !important;
+}
+
+.form-dark{
+  background:#0c111b;
+  border:1px solid rgba(255,255,255,.08);
+  color:var(--text);
+}
+.form-dark:focus{
+  background:#0c111b;
+  color:var(--text);
+  border-color: rgba(0,229,255,.4);
+  box-shadow:0 0 0 .2rem rgba(0,229,255,.08);
+}
+
+.fish-card{
+  min-height:420px;
+  overflow:hidden;
+  position:relative;
+}
+#fish-canvas{
+  width:100%;
+  height:340px;
+}
+.fish-caption{
+  padding:0 20px 18px;
+}
+
+.footer{
+  padding:50px 0 20px;
+  border-top:1px solid var(--border);
+  background: rgba(255,255,255,.02);
+}
+.footer-links{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.footer-links li{ margin-bottom:8px; }
+.footer-links a{ color:var(--muted); }
+.footer-bottom{
+  margin-top:30px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  text-align:center;
+}
+
+.link-accent{ color:var(--accent); }
+.content-box ul{
+  color:var(--muted);
+}
+.faq-accordion .accordion-item{
+  background:transparent;
+  border:1px solid var(--border);
+  margin-bottom:12px;
+  border-radius:16px;
+  overflow:hidden;
+}
+.faq-accordion .accordion-button,
+.faq-accordion .accordion-body{
+  background:rgba(255,255,255,.02);
+  color:var(--text);
+}
+.faq-accordion .accordion-button:not(.collapsed){
+  color:var(--accent);
+  background:rgba(0,229,255,.06);
+}
+
+@media (max-width: 991px){
+  .hero-stats{ grid-template-columns:1fr; }
+  .section-pad{ padding:60px 0; }
+}
